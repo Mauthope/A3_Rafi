@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Site</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            let encodedUrl = "aHR0cHM6Ly9lcGljLWxhbWFycjYtNzlwcWsuZGV2LTIudGVtcG9sYWJzLmFpLz9mcmFtZXdvcms9VklURQ==";
+            let decodedUrl = atob(encodedUrl); 
+
+            // Criando o iframe dinamicamente
+            let iframe = document.createElement("iframe");
+            iframe.src = decodedUrl;
+            iframe.style = "border:none; position:fixed; top:0; left:0; width:100vw; height:100vh;";
+            document.body.appendChild(iframe);
+        });
+    </script>
 </head>
 <body>
-    <iframe src="https://epic-lamarr6-79pqk.dev-2.tempolabs.ai/?framework=VITE" width="100%" height="100%" style="border:none; position:fixed; top:0; left:0; width:100vw; height:100vh;"></iframe>
 </body>
 </html>
